@@ -21,7 +21,7 @@ public class ConwaysLife {
 
             for (int i = 0; i < 50; i++) {
                 //render(simulation, screen, graphics);   // Render the current state of the simulation
-                sampleRender(screen, graphics, i);
+                test();
                 Thread.yield();                         // Let the JVM have some time to update other things
                 Thread.sleep(100);                // Sleep for a bit to make for a nicer paced animation
                 //simulation.update();                    // Tell the simulation to update
@@ -44,5 +44,15 @@ public class ConwaysLife {
             screen.refresh();
         } catch (Exception ex) {
         }
+    }
+    public static void render(LifeSimulator simulation, Screen screen, TextGraphics graphics) {
+        LifeSimulator mySim = new LifeSimulator(100,100);
+        mySim.insertPattern(new PatternAcorn(), 0, 0);
+        mySim.insertPattern(new PatternAcorn(), 0, 10);
+        mySim.insertPattern(new PatternAcorn(), 15, 15);
+    }
+    public static void test(TextGraphics graphics){
+        LifeSimulator mySim = new LifeSimulator(5,5);
+        
     }
 }

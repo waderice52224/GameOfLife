@@ -1,4 +1,4 @@
-public class PatternBlinker {
+public class PatternBlinker extends Pattern {
     public int getSizeX(){
         return 5;
     }
@@ -8,4 +8,5 @@ public class PatternBlinker {
     public boolean getCell(int x, int y){
         return true;
     }
+
 }
